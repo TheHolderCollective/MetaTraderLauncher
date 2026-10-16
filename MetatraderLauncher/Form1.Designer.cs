@@ -548,7 +548,7 @@
             btn_t3_Connect.TabIndex = 0;
             btn_t3_Connect.Text = "Connect";
             btn_t3_Connect.UseVisualStyleBackColor = true;
-            btn_t3_Connect.Click += btn_t3_Connect_Click_1;
+            btn_t3_Connect.Click += btn_t3_Connect_Click;
             // 
             // groupBox7
             // 

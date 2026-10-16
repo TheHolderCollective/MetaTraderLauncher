@@ -48,7 +48,7 @@ public partial class frm_Launcher : Form
         else
         {
             t1_Status.Text = "Disconnected";
-            ClearTextBoxesTerminal1();
+            ClearTextBoxes(groupBox1);
         }
     }
 
@@ -80,11 +80,11 @@ public partial class frm_Launcher : Form
         else
         {
             t2_Status.Text = "Disconnected";
-            ClearTextBoxesTerminal2();
+            ClearTextBoxes(groupBox2);
         }
     }
 
-    private async void btn_t3_Connect_Click_1(object sender, EventArgs e)
+    private async void btn_t3_Connect_Click(object sender, EventArgs e)
     {
         terminal3 = new MT5Client(terminalLaunchInfo[2].WebSocketPort);
 
@@ -112,7 +112,7 @@ public partial class frm_Launcher : Form
         else
         {
             t3_Status.Text = "Disconnected";
-            ClearTextBoxesTerminal3();
+            ClearTextBoxes(groupBox3);
         }
     }
 
@@ -125,36 +125,17 @@ public partial class frm_Launcher : Form
 
     private void ClearAllTextBoxes()
     {
-        ClearTextBoxesTerminal1();
-        ClearTextBoxesTerminal2();
-        ClearTextBoxesTerminal3();
+        ClearTextBoxes(groupBox1);
+        ClearTextBoxes(groupBox2);
+        ClearTextBoxes(groupBox3);
     }
 
-    private void ClearTextBoxesTerminal1()
+    private void ClearTextBoxes(GroupBox grpBox)
     {
-        txt_t1_Name.Clear();
-        txt_t1_Server.Clear();
-        txt_t1_Login.Clear();
-        txt_t1_Currency.Clear();
-        txt_t1_Balance.Clear();
-    }
-
-    private void ClearTextBoxesTerminal2()
-    {
-        txt_t2_Name.Clear();
-        txt_t2_Server.Clear();
-        txt_t2_Login.Clear();
-        txt_t2_Currency.Clear();
-        txt_t2_Balance.Clear();
-    }
-
-    private void ClearTextBoxesTerminal3()
-    {
-        txt_t3_Name.Clear();
-        txt_t3_Server.Clear();
-        txt_t3_Login.Clear();
-        txt_t3_Currency.Clear();
-        txt_t3_Balance.Clear();
+        foreach (var item in grpBox.Controls.OfType<TextBox>())
+        {
+              item.Clear();
+        }
     }
 
     private void btn_LaunchAll_Click(object sender, EventArgs e)
@@ -175,9 +156,18 @@ public partial class frm_Launcher : Form
         {
             if (terminalLaunchInfo[i].FileName is not null)
             {
-                terminalProcesses.Add(Process.Start(terminalLaunchInfo[i].FileName));
-                terminalLaunched[i] = true;
-                Thread.Sleep(500);
+                try
+                {
+                    terminalProcesses.Add(Process.Start(terminalLaunchInfo[i].FileName));
+                    terminalLaunched[i] = true;
+                    Thread.Sleep(500);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK);
+
+                }
             }
         }
     }
@@ -199,7 +189,6 @@ public partial class frm_Launcher : Form
     {
         List<LaunchInfo> launchList = [];
 
-
         LaunchInfo terminal1 = new()
         {
             TerminalType = "MT4",
@@ -217,7 +206,7 @@ public partial class frm_Launcher : Form
         LaunchInfo terminal3 = new()
         {
             TerminalType = "MT5",
-            FileName = @"C:\Program Files\LiteFinance MT5 Terminal\terminal64.exe",
+            FileName = @"C:\Program Files\Axi MetaTrader 5 Terminal\terminal64.exe",
             WebSocketPort = "83"
         };
 
@@ -228,5 +217,4 @@ public partial class frm_Launcher : Form
         return launchList;
     }
 
-    
 }
