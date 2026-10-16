@@ -22,10 +22,9 @@ public partial class frm_Launcher : Form
 
     private async void btn_t1_Connect_Click(object sender, EventArgs e)
     {
-        terminal1 = new MT4Client(terminalLaunchInfo[0].WebSocketPort);
-
         if (terminalLaunched[0])
         {
+            terminal1 = new MT4Client(terminalLaunchInfo[0].WebSocketPort);
 
             if (terminal1.ClientStatusIsOK())
             {
@@ -34,6 +33,7 @@ public partial class frm_Launcher : Form
             else
             {
                 t1_Status.Text = "Disconnected";
+                return;
             }
 
             var accountInfo = await terminal1.GetAccountInfoAsync();
@@ -54,20 +54,20 @@ public partial class frm_Launcher : Form
 
     private async void btn_t2_Connect_Click(object sender, EventArgs e)
     {
-        terminal2 = new MT4Client(terminalLaunchInfo[1].WebSocketPort);
-
         if (terminalLaunched[1])
         {
+            terminal2 = new MT4Client(terminalLaunchInfo[1].WebSocketPort);
 
             if (terminal2.ClientStatusIsOK())
             {
                 t2_Status.Text = "Connected";
+
             }
             else
             {
                 t2_Status.Text = "Disconnected";
+                return;
             }
-
             var accountInfo = await terminal2.GetAccountInfoAsync();
             var terminalInfo = await terminal2.GetTerminalInfoAsync();
 
@@ -76,6 +76,7 @@ public partial class frm_Launcher : Form
             txt_t2_Login.Text = accountInfo.Login.ToString();
             txt_t2_Currency.Text = accountInfo.Currency;
             txt_t2_Balance.Text = accountInfo.Balance.ToString();
+
         }
         else
         {
@@ -86,10 +87,9 @@ public partial class frm_Launcher : Form
 
     private async void btn_t3_Connect_Click(object sender, EventArgs e)
     {
-        terminal3 = new MT5Client(terminalLaunchInfo[2].WebSocketPort);
-
         if (terminalLaunched[2])
         {
+            terminal3 = new MT5Client(terminalLaunchInfo[2].WebSocketPort);
 
             if (terminal3.ClientStatusIsOK())
             {
@@ -98,6 +98,7 @@ public partial class frm_Launcher : Form
             else
             {
                 t3_Status.Text = "Disconnected";
+                return;
             }
 
             var accountInfo = await terminal3.GetAccountInfoAsync();
@@ -113,6 +114,14 @@ public partial class frm_Launcher : Form
         {
             t3_Status.Text = "Disconnected";
             ClearTextBoxes(groupBox3);
+        }
+    }
+
+    private void ResetTerminalLaunchStatuses()
+    {
+        for (int i = 0; i < terminalLaunched.Length; i++)
+        {
+            terminalLaunched[i] = false;
         }
     }
 
@@ -134,7 +143,7 @@ public partial class frm_Launcher : Form
     {
         foreach (var item in grpBox.Controls.OfType<TextBox>())
         {
-              item.Clear();
+            item.Clear();
         }
     }
 
@@ -183,6 +192,7 @@ public partial class frm_Launcher : Form
         terminalProcesses.Clear();
         ClearAllTextBoxes();
         SetAllStatuses("Disconnected");
+        ResetTerminalLaunchStatuses();
     }
 
     private List<LaunchInfo> CreateLaunchList()
@@ -216,5 +226,4 @@ public partial class frm_Launcher : Form
 
         return launchList;
     }
-
 }
