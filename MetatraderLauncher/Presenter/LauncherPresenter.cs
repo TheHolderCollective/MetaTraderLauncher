@@ -15,15 +15,22 @@ public class LauncherPresenter
         _view.SetPresenter(this);
     }
 
+    public async Task UpdateAccountInfo(TerminalID terminalID)
+    {
+        AccountInfo accountInfo = await _model.GetAccountInfo(terminalID);
+        _view.UpdateAccountInfo(terminalID, accountInfo);
+        // add code to update terminal status
+    }
+
     public void LaunchAllTerminals()
     {
         _model.LaunchAllTerminals();
-        
     }
 
     public void KillAllTerminals()
     {
         _model.KillAllTerminals();
-        // add code to clear text boxes
+        _view.ClearAccountInfo();
+        // add code to update terminal statuses
     }
 }

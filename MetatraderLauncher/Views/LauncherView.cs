@@ -1,3 +1,4 @@
+using MetatraderLauncher.Models;
 using MetatraderLauncher.Presenter;
 
 namespace MetatraderLauncher.Views;
@@ -12,10 +13,35 @@ public partial class LauncherView : Form, ILauncherView
         btn_LaunchAll.Select();
     }
 
+    #region Interface methods
+
     public void SetPresenter(LauncherPresenter presenter)
     {
         _presenter = presenter;
     }
+
+    public void UpdateAccountInfo(TerminalID terminalID, AccountInfo accountInfo)
+    {
+        switch (terminalID)
+        {
+            case TerminalID.Terminal1:
+                UpdateTextBoxes(groupBox1, accountInfo);
+                break;
+            case TerminalID.Terminal2:
+                UpdateTextBoxes(groupBox2, accountInfo);
+                break;
+            case TerminalID.Terminal3:
+                UpdateTextBoxes(groupBox3, accountInfo);
+                break;
+        }
+    }
+
+    public void ClearAccountInfo()
+    {
+        ClearAllTextBoxes();
+    }
+
+    #endregion
 
     private void btn_LaunchAll_Click(object sender, EventArgs e)
     {
@@ -27,47 +53,53 @@ public partial class LauncherView : Form, ILauncherView
         _presenter.KillAllTerminals();
     }
 
-
     private async void btn_t1_Connect_Click(object sender, EventArgs e)
     {
-        //if (terminalLaunched[0])
-        //{
-        //    terminal1 = new MT4Client(terminalLaunchInfo[0].WebSocketPort);
-
-        //    if (terminal1.ClientStatusIsOK())
-        //    {
-        //        t1_Status.Text = "Connected";
-        //    }
-        //    else
-        //    {
-        //        t1_Status.Text = "Disconnected";
-        //        return;
-        //    }
-
-        //    var accountInfo = await terminal1.GetAccountInfoAsync();
-        //    var terminalInfo = await terminal1.GetTerminalInfoAsync();
-
-        //    txt_t1_Name.Text = accountInfo.Name;
-        //    txt_t1_Server.Text = accountInfo.Server;
-        //    txt_t1_Login.Text = accountInfo.Login.ToString();
-        //    txt_t1_Currency.Text = accountInfo.Currency;
-        //    txt_t1_Balance.Text = accountInfo.Balance.ToString();
-        //}
-        //else
-        //{
-        //    t1_Status.Text = "Disconnected";
-        //    ClearTextBoxes(groupBox1);
-        //}
+        await _presenter.UpdateAccountInfo(TerminalID.Terminal1);
     }
 
     private async void btn_t2_Connect_Click(object sender, EventArgs e)
     {
-       
+        await _presenter.UpdateAccountInfo(TerminalID.Terminal2);
     }
 
     private async void btn_t3_Connect_Click(object sender, EventArgs e)
     {
-     
+        await _presenter.UpdateAccountInfo(TerminalID.Terminal3);
+    }
+
+    #region Helpers
+
+    private static void UpdateTextBoxes(GroupBox grpBox, AccountInfo accountInfo)
+    {
+        foreach (var item in grpBox.Controls.OfType<TextBox>())
+        {
+            if (item.Name.Contains("_Name"))
+                item.Text = accountInfo.Name;
+            if (item.Name.Contains("_Server"))
+                item.Text = accountInfo.Server;
+            if (item.Name.Contains("_Login"))
+                item.Text = accountInfo.Login;
+            if (item.Name.Contains("_Currency"))
+                item.Text = accountInfo.Currency;
+            if (item.Name.Contains("_Balance"))
+                item.Text = accountInfo.Balance;
+        }
+    }
+
+    private void ClearAllTextBoxes()
+    {
+        ClearTextBoxes(groupBox2);
+        ClearTextBoxes(groupBox3);
+        ClearTextBoxes(groupBox1);
+    }
+
+    private static void ClearTextBoxes(GroupBox grpBox)
+    {
+        foreach (var item in grpBox.Controls.OfType<TextBox>())
+        {
+            item.Clear();
+        }
     }
 
     private void SetAllStatuses(string status)
@@ -77,18 +109,5 @@ public partial class LauncherView : Form, ILauncherView
         t3_Status.Text = status;
     }
 
-    private void ClearAllTextBoxes()
-    {
-        ClearTextBoxes(groupBox1);
-        ClearTextBoxes(groupBox2);
-        ClearTextBoxes(groupBox3);
-    }
-
-    private void ClearTextBoxes(GroupBox grpBox)
-    {
-        foreach (var item in grpBox.Controls.OfType<TextBox>())
-        {
-            item.Clear();
-        }
-    }
+    #endregion
 }

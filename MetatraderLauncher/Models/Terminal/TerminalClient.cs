@@ -6,13 +6,14 @@ using MetatraderSharp.MTsocketAPI.Responses.MT4;
 
 namespace MetatraderLauncher.Models;
 
-internal class TerminalClient : ITerminalClient
+public class TerminalClient : ITerminalClient
 {
     private MT4Client _mt4Client;
     private MT5Client _mt5Client;
     private ClientType _clientType;
 
     public bool Connected { get; set; }
+    public ClientType ClientType { get { return _clientType; } }
 
     public TerminalClient(ClientType clientType, string webSocketPort)
     {
@@ -132,5 +133,4 @@ internal class TerminalClient : ITerminalClient
 
         return response;
     }
-
 }

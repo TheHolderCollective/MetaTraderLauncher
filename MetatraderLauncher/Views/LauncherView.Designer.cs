@@ -28,7 +28,7 @@ partial class LauncherView
     /// </summary>
     private void InitializeComponent()
     {
-        groupBox3 = new GroupBox();
+        groupBox1 = new GroupBox();
         t1_Status = new Label();
         label16 = new Label();
         txt_t1_Balance = new TextBox();
@@ -41,7 +41,7 @@ partial class LauncherView
         label3 = new Label();
         label2 = new Label();
         label1 = new Label();
-        groupBox1 = new GroupBox();
+        groupBox2 = new GroupBox();
         t2_Status = new Label();
         label17 = new Label();
         txt_t2_Balance = new TextBox();
@@ -54,7 +54,7 @@ partial class LauncherView
         label8 = new Label();
         label9 = new Label();
         label10 = new Label();
-        groupBox2 = new GroupBox();
+        groupBox3 = new GroupBox();
         t3_Status = new Label();
         label18 = new Label();
         txt_t3_Balance = new TextBox();
@@ -79,35 +79,35 @@ partial class LauncherView
         groupBox7 = new GroupBox();
         btn_LaunchAll = new Button();
         btn_KillAll = new Button();
-        groupBox3.SuspendLayout();
         groupBox1.SuspendLayout();
         groupBox2.SuspendLayout();
+        groupBox3.SuspendLayout();
         groupBox4.SuspendLayout();
         groupBox5.SuspendLayout();
         groupBox6.SuspendLayout();
         groupBox7.SuspendLayout();
         SuspendLayout();
         // 
-        // groupBox3
+        // groupBox1
         // 
-        groupBox3.Controls.Add(t1_Status);
-        groupBox3.Controls.Add(label16);
-        groupBox3.Controls.Add(txt_t1_Balance);
-        groupBox3.Controls.Add(txt_t1_Currency);
-        groupBox3.Controls.Add(txt_t1_Login);
-        groupBox3.Controls.Add(txt_t1_Server);
-        groupBox3.Controls.Add(txt_t1_Name);
-        groupBox3.Controls.Add(label5);
-        groupBox3.Controls.Add(label4);
-        groupBox3.Controls.Add(label3);
-        groupBox3.Controls.Add(label2);
-        groupBox3.Controls.Add(label1);
-        groupBox3.Location = new Point(25, 19);
-        groupBox3.Name = "groupBox3";
-        groupBox3.Size = new Size(209, 184);
-        groupBox3.TabIndex = 0;
-        groupBox3.TabStop = false;
-        groupBox3.Text = "Terminal 1";
+        groupBox1.Controls.Add(t1_Status);
+        groupBox1.Controls.Add(label16);
+        groupBox1.Controls.Add(txt_t1_Balance);
+        groupBox1.Controls.Add(txt_t1_Currency);
+        groupBox1.Controls.Add(txt_t1_Login);
+        groupBox1.Controls.Add(txt_t1_Server);
+        groupBox1.Controls.Add(txt_t1_Name);
+        groupBox1.Controls.Add(label5);
+        groupBox1.Controls.Add(label4);
+        groupBox1.Controls.Add(label3);
+        groupBox1.Controls.Add(label2);
+        groupBox1.Controls.Add(label1);
+        groupBox1.Location = new Point(25, 19);
+        groupBox1.Name = "groupBox1";
+        groupBox1.Size = new Size(209, 184);
+        groupBox1.TabIndex = 0;
+        groupBox1.TabStop = false;
+        groupBox1.Text = "Terminal 1";
         // 
         // t1_Status
         // 
@@ -212,26 +212,26 @@ partial class LauncherView
         label1.TabIndex = 0;
         label1.Text = "Name:";
         // 
-        // groupBox1
+        // groupBox2
         // 
-        groupBox1.Controls.Add(t2_Status);
-        groupBox1.Controls.Add(label17);
-        groupBox1.Controls.Add(txt_t2_Balance);
-        groupBox1.Controls.Add(txt_t2_Currency);
-        groupBox1.Controls.Add(txt_t2_Login);
-        groupBox1.Controls.Add(txt_t2_Server);
-        groupBox1.Controls.Add(txt_t2_Name);
-        groupBox1.Controls.Add(label6);
-        groupBox1.Controls.Add(label7);
-        groupBox1.Controls.Add(label8);
-        groupBox1.Controls.Add(label9);
-        groupBox1.Controls.Add(label10);
-        groupBox1.Location = new Point(258, 19);
-        groupBox1.Name = "groupBox1";
-        groupBox1.Size = new Size(209, 184);
-        groupBox1.TabIndex = 0;
-        groupBox1.TabStop = false;
-        groupBox1.Text = "Terminal 2";
+        groupBox2.Controls.Add(t2_Status);
+        groupBox2.Controls.Add(label17);
+        groupBox2.Controls.Add(txt_t2_Balance);
+        groupBox2.Controls.Add(txt_t2_Currency);
+        groupBox2.Controls.Add(txt_t2_Login);
+        groupBox2.Controls.Add(txt_t2_Server);
+        groupBox2.Controls.Add(txt_t2_Name);
+        groupBox2.Controls.Add(label6);
+        groupBox2.Controls.Add(label7);
+        groupBox2.Controls.Add(label8);
+        groupBox2.Controls.Add(label9);
+        groupBox2.Controls.Add(label10);
+        groupBox2.Location = new Point(258, 19);
+        groupBox2.Name = "groupBox2";
+        groupBox2.Size = new Size(209, 184);
+        groupBox2.TabIndex = 0;
+        groupBox2.TabStop = false;
+        groupBox2.Text = "Terminal 2";
         // 
         // t2_Status
         // 
@@ -336,26 +336,26 @@ partial class LauncherView
         label10.TabIndex = 0;
         label10.Text = "Name:";
         // 
-        // groupBox2
+        // groupBox3
         // 
-        groupBox2.Controls.Add(t3_Status);
-        groupBox2.Controls.Add(label18);
-        groupBox2.Controls.Add(txt_t3_Balance);
-        groupBox2.Controls.Add(txt_t3_Currency);
-        groupBox2.Controls.Add(txt_t3_Login);
-        groupBox2.Controls.Add(txt_t3_Server);
-        groupBox2.Controls.Add(txt_t3_Name);
-        groupBox2.Controls.Add(label11);
-        groupBox2.Controls.Add(label12);
-        groupBox2.Controls.Add(label13);
-        groupBox2.Controls.Add(label14);
-        groupBox2.Controls.Add(label15);
-        groupBox2.Location = new Point(491, 19);
-        groupBox2.Name = "groupBox2";
-        groupBox2.Size = new Size(209, 184);
-        groupBox2.TabIndex = 0;
-        groupBox2.TabStop = false;
-        groupBox2.Text = "Terminal 3";
+        groupBox3.Controls.Add(t3_Status);
+        groupBox3.Controls.Add(label18);
+        groupBox3.Controls.Add(txt_t3_Balance);
+        groupBox3.Controls.Add(txt_t3_Currency);
+        groupBox3.Controls.Add(txt_t3_Login);
+        groupBox3.Controls.Add(txt_t3_Server);
+        groupBox3.Controls.Add(txt_t3_Name);
+        groupBox3.Controls.Add(label11);
+        groupBox3.Controls.Add(label12);
+        groupBox3.Controls.Add(label13);
+        groupBox3.Controls.Add(label14);
+        groupBox3.Controls.Add(label15);
+        groupBox3.Location = new Point(491, 19);
+        groupBox3.Name = "groupBox3";
+        groupBox3.Size = new Size(209, 184);
+        groupBox3.TabIndex = 0;
+        groupBox3.TabStop = false;
+        groupBox3.Text = "Terminal 3";
         // 
         // t3_Status
         // 
@@ -590,20 +590,20 @@ partial class LauncherView
         Controls.Add(groupBox6);
         Controls.Add(groupBox5);
         Controls.Add(groupBox4);
+        Controls.Add(groupBox3);
         Controls.Add(groupBox2);
         Controls.Add(groupBox1);
-        Controls.Add(groupBox3);
         FormBorderStyle = FormBorderStyle.FixedSingle;
         MaximizeBox = false;
         MinimizeBox = false;
         Name = "LauncherView";
         Text = "MetaTrader Launcher";
-        groupBox3.ResumeLayout(false);
-        groupBox3.PerformLayout();
         groupBox1.ResumeLayout(false);
         groupBox1.PerformLayout();
         groupBox2.ResumeLayout(false);
         groupBox2.PerformLayout();
+        groupBox3.ResumeLayout(false);
+        groupBox3.PerformLayout();
         groupBox4.ResumeLayout(false);
         groupBox5.ResumeLayout(false);
         groupBox6.ResumeLayout(false);
@@ -612,7 +612,7 @@ partial class LauncherView
     }
 
     #endregion
-    private GroupBox groupBox3;
+    private GroupBox groupBox1;
     private Label label5;
     private Label label4;
     private Label label3;
@@ -623,7 +623,7 @@ partial class LauncherView
     private TextBox txt_t1_Login;
     private TextBox txt_t1_Server;
     private TextBox txt_t1_Name;
-    private GroupBox groupBox1;
+    private GroupBox groupBox2;
     private TextBox txt_t2_Balance;
     private TextBox txt_t2_Currency;
     private TextBox txt_t2_Login;
@@ -634,7 +634,7 @@ partial class LauncherView
     private Label label8;
     private Label label9;
     private Label label10;
-    private GroupBox groupBox2;
+    private GroupBox groupBox3;
     private TextBox txt_t3_Balance;
     private TextBox txt_t3_Currency;
     private TextBox txt_t3_Login;

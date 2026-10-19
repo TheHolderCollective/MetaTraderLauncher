@@ -1,14 +1,58 @@
 ﻿using System.Diagnostics;
+using Newtonsoft.Json;
+using MT4 = MetatraderSharp.MTsocketAPI.Responses.MT4;
+using MT5 = MetatraderSharp.MTsocketAPI.Responses.MT5;
 
 namespace MetatraderLauncher.Models;
 
 public class LauncherModel
 {
     private List<TerminalLaunchInfo> _launchInfo;
-
+ 
     public LauncherModel()
     {
         _launchInfo = CreateLaunchInfoList();
+    }
+
+    public async Task<AccountInfo> GetAccountInfo(TerminalID terminalID)
+    {
+        AccountInfo accountInfo = new();
+        TerminalLaunchInfo terminalInfo = _launchInfo.Where(x => x.TerminalNumber == terminalID).Single();
+      
+        if (terminalInfo.Launched == true)
+        {
+            terminalInfo.Client = new TerminalClient(terminalInfo.ClientType, terminalInfo.WebSocketPort);
+
+            if (terminalInfo.Client.Connected)
+            {
+                if (terminalInfo.Client.ClientType == ClientType.MT4)
+                {
+                    var info = (MT4.Account)await terminalInfo.Client.GetAccountInfo();
+
+                    accountInfo.Name = info.Name;
+                    accountInfo.Server = info.Server;
+                    accountInfo.Login = info.Login.ToString();
+                    accountInfo.Currency = info.Currency;
+                    accountInfo.Balance = info.Balance.ToString();
+                    accountInfo.Equity = info.Equity.ToString();
+                    accountInfo.Profit = info.Profit.ToString();
+                }
+                else if (terminalInfo.Client.ClientType == ClientType.MT5)
+                {
+                    var info = (MT5.Account)await terminalInfo.Client.GetAccountInfo();
+
+                    accountInfo.Name = info.Name;
+                    accountInfo.Server = info.Server;
+                    accountInfo.Login = info.Login.ToString();
+                    accountInfo.Currency = info.Currency;
+                    accountInfo.Balance = info.Balance.ToString();
+                    accountInfo.Equity = info.Equity.ToString();
+                    accountInfo.Profit = info.Profit.ToString();
+                }
+            }
+        }
+
+        return accountInfo;
     }
 
     public void LaunchAllTerminals()
@@ -39,7 +83,7 @@ public class LauncherModel
 
     private List<TerminalLaunchInfo> CreateLaunchInfoList()
     {
-        List<TerminalLaunchInfo> launchList = [];
+        List<TerminalLaunchInfo> launchList = new();
 
         TerminalLaunchInfo terminal1 = new()
         {

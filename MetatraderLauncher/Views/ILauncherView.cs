@@ -1,9 +1,11 @@
-﻿using MetatraderLauncher.Presenter;
+﻿using MetatraderLauncher.Models;
+using MetatraderLauncher.Presenter;
 
 namespace MetatraderLauncher.Views;
 
-internal interface ILauncherView
+public interface ILauncherView
 {
     public void SetPresenter(LauncherPresenter presenter);
-    
+    public void UpdateAccountInfo(TerminalID terminal, AccountInfo accountInfo);
+    public void ClearAccountInfo();
 }

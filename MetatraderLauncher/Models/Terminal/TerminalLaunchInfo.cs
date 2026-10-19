@@ -4,14 +4,19 @@ namespace MetatraderLauncher.Models;
 
 public class TerminalLaunchInfo
 {
-    public string? FileName { get; set; }
-    public string? WebSocketPort { get; set; }
+    public string FileName { get; set; }
+    public string WebSocketPort { get; set; }
     public bool Launched { get; set; }
     public ClientType ClientType { get; set; }
     public TerminalID TerminalNumber { get; set; }
     public Process? TerminalProcess { get; set; }
+    public TerminalClient? Client {get; set;}
 
-    public TerminalLaunchInfo() { }
+    public TerminalLaunchInfo() 
+    {
+        FileName = string.Empty;
+        WebSocketPort = string.Empty;
+    }
 
     public TerminalLaunchInfo(string fileName, ClientType clientType, string webSocketPort,TerminalID terminalNumber)
     {
@@ -21,5 +26,6 @@ public class TerminalLaunchInfo
         TerminalNumber = terminalNumber;
         Launched = false;
         TerminalProcess = null;
+        Client = null;
     }
 }
