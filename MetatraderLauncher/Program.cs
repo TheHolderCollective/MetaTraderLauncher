@@ -1,4 +1,6 @@
 using MetatraderLauncher.Views;
+using MetatraderLauncher.Models;
+using MetatraderLauncher.Presenter;
 
 namespace MetatraderLauncher;
 
@@ -13,6 +15,12 @@ internal static class Program
         // To customize application configuration such as set high DPI settings or default font,
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
-        Application.Run(new frm_Launcher());
+
+        LauncherModel model = new LauncherModel();
+        LauncherView view = new LauncherView();
+        LauncherPresenter presenter = new LauncherPresenter(view, model);
+        view.SetPresenter(presenter);
+
+        Application.Run(view);
     }
 }

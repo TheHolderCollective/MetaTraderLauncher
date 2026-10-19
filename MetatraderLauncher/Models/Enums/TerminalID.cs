@@ -1,6 +1,6 @@
 ﻿namespace MetatraderLauncher.Models;
 
-public enum Terminals
+public enum TerminalID
 {
     Terminal1,
     Terminal2,

@@ -1,0 +1,29 @@
+﻿using MetatraderLauncher.Models;
+using MetatraderLauncher.Views;
+
+namespace MetatraderLauncher.Presenter;
+
+public class LauncherPresenter
+{
+    private LauncherView _view;
+    private LauncherModel _model;
+
+    public LauncherPresenter(LauncherView view, LauncherModel model)
+    {
+        _model = model;
+        _view = view;
+        _view.SetPresenter(this);
+    }
+
+    public void LaunchAllTerminals()
+    {
+        _model.LaunchAllTerminals();
+        
+    }
+
+    public void KillAllTerminals()
+    {
+        _model.KillAllTerminals();
+        // add code to clear text boxes
+    }
+}
