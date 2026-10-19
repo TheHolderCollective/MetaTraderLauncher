@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MetatraderLauncher.Models;
+﻿namespace MetatraderLauncher.Models;
 
 internal class LaunchInfo
 {
-    public string? FileName { get; set; }
     public string? NickName { get; set; }
     public string? TerminalType { get; set; }
+    
+    public string? FileName { get; set; }
     public string? WebSocketPort { get; set; }
+    public ClientType ClientType { get; set; }
 
     public LaunchInfo()
     {
@@ -25,4 +21,13 @@ internal class LaunchInfo
         TerminalType = terminalType;
         WebSocketPort = webSocketPort;
     }
+
+    public LaunchInfo(string fileName, ClientType clientType, string webSocketPort)
+    {
+        FileName = fileName;
+        ClientType = clientType;
+        WebSocketPort = webSocketPort;
+    }
+
+
 }

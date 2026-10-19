@@ -6,12 +6,6 @@ using MetatraderSharp.MTsocketAPI.Responses.MT4;
 
 namespace MetatraderLauncher.Models;
 
-public enum ClientType
-{
-    MT4,
-    MT5
-}
-
 internal class TerminalClient : ITerminalClient
 {
     private MT4Client _mt4Client;
