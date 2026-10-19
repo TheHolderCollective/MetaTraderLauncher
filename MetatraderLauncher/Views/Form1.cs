@@ -1,7 +1,8 @@
 using MetatraderSharp.MetatraderClient;
+using MetatraderLauncher.Models;
 using System.Diagnostics;
 
-namespace MetatraderLauncher;
+namespace MetatraderLauncher.Views;
 
 public partial class frm_Launcher : Form
 {
