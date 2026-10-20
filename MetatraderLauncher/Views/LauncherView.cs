@@ -110,4 +110,9 @@ public partial class LauncherView : Form, ILauncherView
     }
 
     #endregion
+
+    private void groupBox1_Enter(object sender, EventArgs e)
+    {
+
+    }
 }
