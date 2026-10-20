@@ -1,5 +1,5 @@
 using MetatraderLauncher.Models;
-using MetatraderLauncher.Presenter;
+using MetatraderLauncher.Presenters;
 
 namespace MetatraderLauncher.Views;
 
@@ -46,6 +46,18 @@ public partial class LauncherView : Form, ILauncherView
         this.TopMost = true;
     }
 
+    public void LaunchTradeView(TerminalID terminalID, LauncherModel launcherModel)
+    {
+        TradeView view = new TradeView();
+        TradeModel tradeModel = new TradeModel();
+        TradePresenter presenter = new TradePresenter(tradeModel, launcherModel, view);
+
+        view.SetPresenter(presenter);
+        view.Text = "Trade - Terminal " + (int)(terminalID + 1);
+        view.Show();
+        view.TopMost = true;
+    }
+
     #endregion
 
     #region Event handler methods
@@ -73,6 +85,21 @@ public partial class LauncherView : Form, ILauncherView
     private async void btn_t3_Connect_Click(object sender, EventArgs e)
     {
         await _presenter.UpdateAccountInfo(TerminalID.Terminal3);
+    }
+
+    private void btn_t1_Trade_Click(object sender, EventArgs e)
+    {
+        _presenter.LaunchTradeView(TerminalID.Terminal1);
+    }
+
+    private void btn_t2_Trade_Click(object sender, EventArgs e)
+    {
+        _presenter.LaunchTradeView(TerminalID.Terminal2);
+    }
+
+    private void btn_t3_Trade_Click(object sender, EventArgs e)
+    {
+        _presenter.LaunchTradeView(TerminalID.Terminal3);
     }
 
     #endregion
@@ -114,4 +141,5 @@ public partial class LauncherView : Form, ILauncherView
     }
 
     #endregion
+
 }

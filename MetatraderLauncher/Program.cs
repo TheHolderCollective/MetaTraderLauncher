@@ -1,6 +1,6 @@
 using MetatraderLauncher.Views;
 using MetatraderLauncher.Models;
-using MetatraderLauncher.Presenter;
+using MetatraderLauncher.Presenters;
 
 namespace MetatraderLauncher;
 

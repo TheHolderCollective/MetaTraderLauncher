@@ -68,13 +68,13 @@ partial class LauncherView
         label13 = new Label();
         label14 = new Label();
         groupBox4 = new GroupBox();
-        btn_t1_Kill = new Button();
+        btn_t1_Trade = new Button();
         btn_t1_Connect = new Button();
         groupBox5 = new GroupBox();
-        btn_t2_Kill = new Button();
+        btn_t2_Trade = new Button();
         btn_t2_Connect = new Button();
         groupBox6 = new GroupBox();
-        btn_t3_Kill = new Button();
+        btn_t3_Trade = new Button();
         btn_t3_Connect = new Button();
         groupBox7 = new GroupBox();
         btn_LaunchAll = new Button();
@@ -112,6 +112,7 @@ partial class LauncherView
         // 
         // txt_t1_Profit
         // 
+        txt_t1_Profit.BackColor = SystemColors.ControlLightLight;
         txt_t1_Profit.Location = new Point(75, 167);
         txt_t1_Profit.Name = "txt_t1_Profit";
         txt_t1_Profit.ReadOnly = true;
@@ -120,6 +121,7 @@ partial class LauncherView
         // 
         // txt_t1_Equity
         // 
+        txt_t1_Equity.BackColor = SystemColors.ControlLightLight;
         txt_t1_Equity.Location = new Point(75, 138);
         txt_t1_Equity.Name = "txt_t1_Equity";
         txt_t1_Equity.ReadOnly = true;
@@ -128,6 +130,7 @@ partial class LauncherView
         // 
         // txt_t1_Balance
         // 
+        txt_t1_Balance.BackColor = SystemColors.ControlLightLight;
         txt_t1_Balance.Location = new Point(75, 110);
         txt_t1_Balance.Name = "txt_t1_Balance";
         txt_t1_Balance.ReadOnly = true;
@@ -136,6 +139,7 @@ partial class LauncherView
         // 
         // txt_t1_Currency
         // 
+        txt_t1_Currency.BackColor = SystemColors.ControlLightLight;
         txt_t1_Currency.Location = new Point(75, 82);
         txt_t1_Currency.Name = "txt_t1_Currency";
         txt_t1_Currency.ReadOnly = true;
@@ -144,6 +148,7 @@ partial class LauncherView
         // 
         // txt_t1_Login
         // 
+        txt_t1_Login.BackColor = SystemColors.ControlLightLight;
         txt_t1_Login.Location = new Point(66, 55);
         txt_t1_Login.Name = "txt_t1_Login";
         txt_t1_Login.ReadOnly = true;
@@ -152,6 +157,7 @@ partial class LauncherView
         // 
         // txt_t1_Server
         // 
+        txt_t1_Server.BackColor = SystemColors.ControlLightLight;
         txt_t1_Server.Location = new Point(66, 28);
         txt_t1_Server.Name = "txt_t1_Server";
         txt_t1_Server.ReadOnly = true;
@@ -235,6 +241,7 @@ partial class LauncherView
         // 
         // txt_t2_Profit
         // 
+        txt_t2_Profit.BackColor = SystemColors.ControlLightLight;
         txt_t2_Profit.Location = new Point(73, 166);
         txt_t2_Profit.Name = "txt_t2_Profit";
         txt_t2_Profit.ReadOnly = true;
@@ -243,6 +250,7 @@ partial class LauncherView
         // 
         // txt_t2_Equity
         // 
+        txt_t2_Equity.BackColor = SystemColors.ControlLightLight;
         txt_t2_Equity.Location = new Point(73, 138);
         txt_t2_Equity.Name = "txt_t2_Equity";
         txt_t2_Equity.ReadOnly = true;
@@ -251,6 +259,7 @@ partial class LauncherView
         // 
         // txt_t2_Balance
         // 
+        txt_t2_Balance.BackColor = SystemColors.ControlLightLight;
         txt_t2_Balance.Location = new Point(73, 110);
         txt_t2_Balance.Name = "txt_t2_Balance";
         txt_t2_Balance.ReadOnly = true;
@@ -259,6 +268,7 @@ partial class LauncherView
         // 
         // txt_t2_Currency
         // 
+        txt_t2_Currency.BackColor = SystemColors.ControlLightLight;
         txt_t2_Currency.Location = new Point(73, 82);
         txt_t2_Currency.Name = "txt_t2_Currency";
         txt_t2_Currency.ReadOnly = true;
@@ -267,6 +277,7 @@ partial class LauncherView
         // 
         // txt_t2_Login
         // 
+        txt_t2_Login.BackColor = SystemColors.ControlLightLight;
         txt_t2_Login.Location = new Point(65, 55);
         txt_t2_Login.Name = "txt_t2_Login";
         txt_t2_Login.ReadOnly = true;
@@ -275,6 +286,7 @@ partial class LauncherView
         // 
         // txt_t2_Server
         // 
+        txt_t2_Server.BackColor = SystemColors.ControlLightLight;
         txt_t2_Server.Location = new Point(65, 28);
         txt_t2_Server.Name = "txt_t2_Server";
         txt_t2_Server.ReadOnly = true;
@@ -358,6 +370,7 @@ partial class LauncherView
         // 
         // txt_t3_Profit
         // 
+        txt_t3_Profit.BackColor = SystemColors.ControlLightLight;
         txt_t3_Profit.Location = new Point(73, 167);
         txt_t3_Profit.Name = "txt_t3_Profit";
         txt_t3_Profit.ReadOnly = true;
@@ -366,6 +379,7 @@ partial class LauncherView
         // 
         // txt_t3_Equity
         // 
+        txt_t3_Equity.BackColor = SystemColors.ControlLightLight;
         txt_t3_Equity.Location = new Point(73, 138);
         txt_t3_Equity.Name = "txt_t3_Equity";
         txt_t3_Equity.ReadOnly = true;
@@ -374,6 +388,7 @@ partial class LauncherView
         // 
         // txt_t3_Balance
         // 
+        txt_t3_Balance.BackColor = SystemColors.ControlLightLight;
         txt_t3_Balance.Location = new Point(73, 110);
         txt_t3_Balance.Name = "txt_t3_Balance";
         txt_t3_Balance.ReadOnly = true;
@@ -382,6 +397,7 @@ partial class LauncherView
         // 
         // txt_t3_Currency
         // 
+        txt_t3_Currency.BackColor = SystemColors.ControlLightLight;
         txt_t3_Currency.Location = new Point(73, 82);
         txt_t3_Currency.Name = "txt_t3_Currency";
         txt_t3_Currency.ReadOnly = true;
@@ -390,6 +406,7 @@ partial class LauncherView
         // 
         // txt_t3_Login
         // 
+        txt_t3_Login.BackColor = SystemColors.ControlLightLight;
         txt_t3_Login.Location = new Point(64, 55);
         txt_t3_Login.Name = "txt_t3_Login";
         txt_t3_Login.ReadOnly = true;
@@ -398,6 +415,7 @@ partial class LauncherView
         // 
         // txt_t3_Server
         // 
+        txt_t3_Server.BackColor = SystemColors.ControlLightLight;
         txt_t3_Server.Location = new Point(64, 28);
         txt_t3_Server.Name = "txt_t3_Server";
         txt_t3_Server.ReadOnly = true;
@@ -460,7 +478,7 @@ partial class LauncherView
         // 
         // groupBox4
         // 
-        groupBox4.Controls.Add(btn_t1_Kill);
+        groupBox4.Controls.Add(btn_t1_Trade);
         groupBox4.Controls.Add(btn_t1_Connect);
         groupBox4.Location = new Point(25, 254);
         groupBox4.Name = "groupBox4";
@@ -469,14 +487,15 @@ partial class LauncherView
         groupBox4.TabStop = false;
         groupBox4.Text = "Terminal 1 Control";
         // 
-        // btn_t1_Kill
+        // btn_t1_Trade
         // 
-        btn_t1_Kill.Location = new Point(114, 28);
-        btn_t1_Kill.Name = "btn_t1_Kill";
-        btn_t1_Kill.Size = new Size(81, 32);
-        btn_t1_Kill.TabIndex = 0;
-        btn_t1_Kill.Text = "Trade";
-        btn_t1_Kill.UseVisualStyleBackColor = true;
+        btn_t1_Trade.Location = new Point(114, 28);
+        btn_t1_Trade.Name = "btn_t1_Trade";
+        btn_t1_Trade.Size = new Size(81, 32);
+        btn_t1_Trade.TabIndex = 0;
+        btn_t1_Trade.Text = "Trade";
+        btn_t1_Trade.UseVisualStyleBackColor = true;
+        btn_t1_Trade.Click += btn_t1_Trade_Click;
         // 
         // btn_t1_Connect
         // 
@@ -490,7 +509,7 @@ partial class LauncherView
         // 
         // groupBox5
         // 
-        groupBox5.Controls.Add(btn_t2_Kill);
+        groupBox5.Controls.Add(btn_t2_Trade);
         groupBox5.Controls.Add(btn_t2_Connect);
         groupBox5.Location = new Point(256, 254);
         groupBox5.Name = "groupBox5";
@@ -499,14 +518,15 @@ partial class LauncherView
         groupBox5.TabStop = false;
         groupBox5.Text = "Terminal 2 Control";
         // 
-        // btn_t2_Kill
+        // btn_t2_Trade
         // 
-        btn_t2_Kill.Location = new Point(114, 28);
-        btn_t2_Kill.Name = "btn_t2_Kill";
-        btn_t2_Kill.Size = new Size(81, 32);
-        btn_t2_Kill.TabIndex = 0;
-        btn_t2_Kill.Text = "Trade";
-        btn_t2_Kill.UseVisualStyleBackColor = true;
+        btn_t2_Trade.Location = new Point(114, 28);
+        btn_t2_Trade.Name = "btn_t2_Trade";
+        btn_t2_Trade.Size = new Size(81, 32);
+        btn_t2_Trade.TabIndex = 0;
+        btn_t2_Trade.Text = "Trade";
+        btn_t2_Trade.UseVisualStyleBackColor = true;
+        btn_t2_Trade.Click += btn_t2_Trade_Click;
         // 
         // btn_t2_Connect
         // 
@@ -520,7 +540,7 @@ partial class LauncherView
         // 
         // groupBox6
         // 
-        groupBox6.Controls.Add(btn_t3_Kill);
+        groupBox6.Controls.Add(btn_t3_Trade);
         groupBox6.Controls.Add(btn_t3_Connect);
         groupBox6.Location = new Point(489, 254);
         groupBox6.Name = "groupBox6";
@@ -529,14 +549,15 @@ partial class LauncherView
         groupBox6.TabStop = false;
         groupBox6.Text = "Terminal 3 Control";
         // 
-        // btn_t3_Kill
+        // btn_t3_Trade
         // 
-        btn_t3_Kill.Location = new Point(114, 28);
-        btn_t3_Kill.Name = "btn_t3_Kill";
-        btn_t3_Kill.Size = new Size(81, 32);
-        btn_t3_Kill.TabIndex = 0;
-        btn_t3_Kill.Text = "Trade";
-        btn_t3_Kill.UseVisualStyleBackColor = true;
+        btn_t3_Trade.Location = new Point(114, 28);
+        btn_t3_Trade.Name = "btn_t3_Trade";
+        btn_t3_Trade.Size = new Size(81, 32);
+        btn_t3_Trade.TabIndex = 0;
+        btn_t3_Trade.Text = "Trade";
+        btn_t3_Trade.UseVisualStyleBackColor = true;
+        btn_t3_Trade.Click += btn_t3_Trade_Click;
         // 
         // btn_t3_Connect
         // 
@@ -582,6 +603,8 @@ partial class LauncherView
         // ckbx_Connect
         // 
         ckbx_Connect.AutoSize = true;
+        ckbx_Connect.Checked = true;
+        ckbx_Connect.CheckState = CheckState.Checked;
         ckbx_Connect.Location = new Point(24, 433);
         ckbx_Connect.Name = "ckbx_Connect";
         ckbx_Connect.Size = new Size(193, 19);
@@ -604,7 +627,6 @@ partial class LauncherView
         Controls.Add(groupBox1);
         FormBorderStyle = FormBorderStyle.FixedSingle;
         MaximizeBox = false;
-        MinimizeBox = false;
         Name = "LauncherView";
         Text = "MetaTrader Launcher";
         groupBox1.ResumeLayout(false);
@@ -650,13 +672,13 @@ partial class LauncherView
     private Label label13;
     private Label label14;
     private GroupBox groupBox4;
-    private Button btn_t1_Kill;
+    private Button btn_t1_Trade;
     private Button btn_t1_Connect;
     private GroupBox groupBox5;
-    private Button btn_t2_Kill;
+    private Button btn_t2_Trade;
     private Button btn_t2_Connect;
     private GroupBox groupBox6;
-    private Button btn_t3_Kill;
+    private Button btn_t3_Trade;
     private Button btn_t3_Connect;
     private GroupBox groupBox7;
     private Button btn_LaunchAll;

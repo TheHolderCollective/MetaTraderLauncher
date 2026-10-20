@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using Newtonsoft.Json;
 using MT4 = MetatraderSharp.MTsocketAPI.Responses.MT4;
 using MT5 = MetatraderSharp.MTsocketAPI.Responses.MT5;
 

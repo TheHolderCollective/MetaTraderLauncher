@@ -1,7 +1,7 @@
 ﻿using MetatraderLauncher.Models;
 using MetatraderLauncher.Views;
 
-namespace MetatraderLauncher.Presenter;
+namespace MetatraderLauncher.Presenters;
 
 public class LauncherPresenter
 {
@@ -41,5 +41,10 @@ public class LauncherPresenter
         _model.KillAllTerminals();
         _view.ClearAccountInfo();
         // add code to update terminal statuses
+    }
+
+    public void LaunchTradeView(TerminalID terminalID)
+    {
+        _view.LaunchTradeView(terminalID, _model);
     }
 }
