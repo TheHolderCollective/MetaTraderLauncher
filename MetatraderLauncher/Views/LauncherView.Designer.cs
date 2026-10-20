@@ -28,6 +28,7 @@ partial class LauncherView
     /// </summary>
     private void InitializeComponent()
     {
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LauncherView));
         groupBox1 = new GroupBox();
         txt_t1_Profit = new TextBox();
         txt_t1_Equity = new TextBox();
@@ -80,6 +81,7 @@ partial class LauncherView
         btn_LaunchAll = new Button();
         btn_KillAll = new Button();
         ckbx_Connect = new CheckBox();
+        btn_Settings = new Button();
         groupBox1.SuspendLayout();
         groupBox2.SuspendLayout();
         groupBox3.SuspendLayout();
@@ -573,7 +575,7 @@ partial class LauncherView
         // 
         groupBox7.Controls.Add(btn_LaunchAll);
         groupBox7.Controls.Add(btn_KillAll);
-        groupBox7.Location = new Point(24, 350);
+        groupBox7.Location = new Point(26, 350);
         groupBox7.Name = "groupBox7";
         groupBox7.Size = new Size(677, 68);
         groupBox7.TabIndex = 2;
@@ -605,18 +607,30 @@ partial class LauncherView
         ckbx_Connect.AutoSize = true;
         ckbx_Connect.Checked = true;
         ckbx_Connect.CheckState = CheckState.Checked;
-        ckbx_Connect.Location = new Point(24, 433);
+        ckbx_Connect.Location = new Point(75, 432);
         ckbx_Connect.Name = "ckbx_Connect";
         ckbx_Connect.Size = new Size(193, 19);
         ckbx_Connect.TabIndex = 3;
         ckbx_Connect.Text = "Connect to terminals on launch";
         ckbx_Connect.UseVisualStyleBackColor = true;
         // 
+        // btn_Settings
+        // 
+        btn_Settings.BackColor = SystemColors.ControlLightLight;
+        btn_Settings.Image = (Image)resources.GetObject("btn_Settings.Image");
+        btn_Settings.Location = new Point(24, 424);
+        btn_Settings.Name = "btn_Settings";
+        btn_Settings.Size = new Size(37, 33);
+        btn_Settings.TabIndex = 4;
+        btn_Settings.UseVisualStyleBackColor = false;
+        btn_Settings.Click += btn_Settings_Click;
+        // 
         // LauncherView
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(724, 466);
+        Controls.Add(btn_Settings);
         Controls.Add(ckbx_Connect);
         Controls.Add(groupBox7);
         Controls.Add(groupBox6);
@@ -696,4 +710,5 @@ partial class LauncherView
     private Label label24;
     private Label label23;
     private CheckBox ckbx_Connect;
+    private Button btn_Settings;
 }

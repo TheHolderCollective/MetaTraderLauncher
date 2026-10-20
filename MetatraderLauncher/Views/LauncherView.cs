@@ -48,12 +48,23 @@ public partial class LauncherView : Form, ILauncherView
 
     public void LaunchTradeView(TerminalID terminalID, LauncherModel launcherModel)
     {
-        TradeView view = new TradeView();
-        TradeModel tradeModel = new TradeModel();
-        TradePresenter presenter = new TradePresenter(tradeModel, launcherModel, view);
+        TradeView view = new();
+        TradeModel tradeModel = new();
+        TradePresenter presenter = new(tradeModel, launcherModel, view);
 
         view.SetPresenter(presenter);
         view.Text = "Trade - Terminal " + (int)(terminalID + 1);
+        view.Show();
+        view.TopMost = true;
+    }
+
+    public void LaunchSettingsView()
+    {
+        SettingsView view = new();
+        SettingsModel model = new();
+        SettingsPresenter presenter = new(model, view);
+
+        view.SetPresenter(presenter);
         view.Show();
         view.TopMost = true;
     }
@@ -102,6 +113,10 @@ public partial class LauncherView : Form, ILauncherView
         _presenter.LaunchTradeView(TerminalID.Terminal3);
     }
 
+    private void btn_Settings_Click(object sender, EventArgs e)
+    {
+        _presenter.LaunchSettingsView();
+    }
     #endregion
 
     #region Helpers

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            cbx_t1_ClientType = new ComboBox();
-            label2 = new Label();
-            label3 = new Label();
-            txt_t1_FileName = new TextBox();
-            txt_t1_PortNumber = new TextBox();
             btn_t1_GetFile = new Button();
+            txt_t1_PortNumber = new TextBox();
+            txt_t1_FileName = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            cbx_t1_ClientType = new ComboBox();
+            label1 = new Label();
             groupBox2 = new GroupBox();
             btn_t2_GetFile = new Button();
             txt_t2_PortNumber = new TextBox();
@@ -74,31 +74,28 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Terminal 1";
             // 
-            // label1
+            // btn_t1_GetFile
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(15, 25);
-            label1.Name = "label1";
-            label1.Size = new Size(68, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Client Type:";
+            btn_t1_GetFile.Location = new Point(595, 59);
+            btn_t1_GetFile.Name = "btn_t1_GetFile";
+            btn_t1_GetFile.Size = new Size(24, 22);
+            btn_t1_GetFile.TabIndex = 5;
+            btn_t1_GetFile.Text = "...";
+            btn_t1_GetFile.UseVisualStyleBackColor = true;
             // 
-            // cbx_t1_ClientType
+            // txt_t1_PortNumber
             // 
-            cbx_t1_ClientType.FormattingEnabled = true;
-            cbx_t1_ClientType.Location = new Point(92, 21);
-            cbx_t1_ClientType.Name = "cbx_t1_ClientType";
-            cbx_t1_ClientType.Size = new Size(61, 23);
-            cbx_t1_ClientType.TabIndex = 1;
+            txt_t1_PortNumber.Location = new Point(296, 21);
+            txt_t1_PortNumber.Name = "txt_t1_PortNumber";
+            txt_t1_PortNumber.Size = new Size(60, 23);
+            txt_t1_PortNumber.TabIndex = 4;
             // 
-            // label2
+            // txt_t1_FileName
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(192, 25);
-            label2.Name = "label2";
-            label2.Size = new Size(97, 15);
-            label2.TabIndex = 2;
-            label2.Text = "Web Socket Port:";
+            txt_t1_FileName.Location = new Point(89, 59);
+            txt_t1_FileName.Name = "txt_t1_FileName";
+            txt_t1_FileName.Size = new Size(500, 23);
+            txt_t1_FileName.TabIndex = 3;
             // 
             // label3
             // 
@@ -109,28 +106,31 @@
             label3.TabIndex = 2;
             label3.Text = "File Name:";
             // 
-            // txt_t1_FileName
+            // label2
             // 
-            txt_t1_FileName.Location = new Point(89, 59);
-            txt_t1_FileName.Name = "txt_t1_FileName";
-            txt_t1_FileName.Size = new Size(500, 23);
-            txt_t1_FileName.TabIndex = 3;
+            label2.AutoSize = true;
+            label2.Location = new Point(192, 25);
+            label2.Name = "label2";
+            label2.Size = new Size(97, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Web Socket Port:";
             // 
-            // txt_t1_PortNumber
+            // cbx_t1_ClientType
             // 
-            txt_t1_PortNumber.Location = new Point(296, 21);
-            txt_t1_PortNumber.Name = "txt_t1_PortNumber";
-            txt_t1_PortNumber.Size = new Size(60, 23);
-            txt_t1_PortNumber.TabIndex = 4;
+            cbx_t1_ClientType.FormattingEnabled = true;
+            cbx_t1_ClientType.Location = new Point(92, 21);
+            cbx_t1_ClientType.Name = "cbx_t1_ClientType";
+            cbx_t1_ClientType.Size = new Size(61, 23);
+            cbx_t1_ClientType.TabIndex = 1;
             // 
-            // btn_t1_GetFile
+            // label1
             // 
-            btn_t1_GetFile.Location = new Point(595, 59);
-            btn_t1_GetFile.Name = "btn_t1_GetFile";
-            btn_t1_GetFile.Size = new Size(24, 22);
-            btn_t1_GetFile.TabIndex = 5;
-            btn_t1_GetFile.Text = "...";
-            btn_t1_GetFile.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Location = new Point(15, 25);
+            label1.Name = "label1";
+            label1.Size = new Size(68, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Client Type:";
             // 
             // groupBox2
             // 
@@ -298,6 +298,7 @@
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            MaximizeBox = false;
             Name = "SettingsView";
             Text = "Terminal Settings";
             groupBox1.ResumeLayout(false);

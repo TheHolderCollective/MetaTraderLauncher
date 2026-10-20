@@ -9,5 +9,6 @@ public interface ILauncherView
     public void UpdateAccountInfo(TerminalID terminalID, AccountInfo accountInfo);
     public void ClearAccountInfo();
     public void BringViewToFront();
-    public void LaunchTradeView(TerminalID terminalID,LauncherModel launcherModel);
+    public void LaunchTradeView(TerminalID terminalID, LauncherModel launcherModel);
+    public void LaunchSettingsView();
 }

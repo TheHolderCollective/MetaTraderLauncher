@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using MetatraderLauncher.Presenters;
 
-namespace MetatraderLauncher.Views
+namespace MetatraderLauncher.Views;
+
+public partial class SettingsView : Form, ISettingsView
 {
-    public partial class SettingsView : Form
+    SettingsPresenter _presenter;
+
+    public SettingsView()
     {
-        public SettingsView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
+
+    #region Interface methods
+
+    public void SetPresenter(SettingsPresenter presenter)
+    {
+        _presenter = presenter;
+    }
+
+    #endregion
 }

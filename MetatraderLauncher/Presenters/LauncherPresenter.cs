@@ -47,4 +47,9 @@ public class LauncherPresenter
     {
         _view.LaunchTradeView(terminalID, _model);
     }
+
+    public void LaunchSettingsView()
+    {
+        _view.LaunchSettingsView();
+    }
 }

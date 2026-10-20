@@ -14,5 +14,6 @@ public class TradePresenter
         _tradeModel = tradeModel;
         _launcherModel = launcherModel;
         _view = view;
+        _view.SetPresenter(this);
     }
 }
