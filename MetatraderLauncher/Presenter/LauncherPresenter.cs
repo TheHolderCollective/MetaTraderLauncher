@@ -22,9 +22,18 @@ public class LauncherPresenter
         // add code to update terminal status
     }
 
-    public void LaunchAllTerminals()
+    public async Task LaunchAllTerminals(bool connectOnLaunch = false)
     {
         _model.LaunchAllTerminals();
+
+        if(connectOnLaunch)
+        {
+            await UpdateAccountInfo(TerminalID.Terminal1);
+            await UpdateAccountInfo(TerminalID.Terminal2);
+            await UpdateAccountInfo(TerminalID.Terminal3);
+        }
+
+        _view.FocusView();
     }
 
     public void KillAllTerminals()

@@ -31,8 +31,8 @@ partial class LauncherView
         groupBox1 = new GroupBox();
         t1_Status = new Label();
         label16 = new Label();
-        textBox2 = new TextBox();
-        textBox1 = new TextBox();
+        txt_t1_Profit = new TextBox();
+        txt_t1_Equity = new TextBox();
         txt_t1_Balance = new TextBox();
         txt_t1_Currency = new TextBox();
         txt_t1_Login = new TextBox();
@@ -46,8 +46,8 @@ partial class LauncherView
         groupBox2 = new GroupBox();
         t2_Status = new Label();
         label17 = new Label();
-        textBox4 = new TextBox();
-        textBox3 = new TextBox();
+        txt_t2_Profit = new TextBox();
+        txt_t2_Equity = new TextBox();
         txt_t2_Balance = new TextBox();
         txt_t2_Currency = new TextBox();
         txt_t2_Login = new TextBox();
@@ -61,8 +61,8 @@ partial class LauncherView
         groupBox3 = new GroupBox();
         t3_Status = new Label();
         label18 = new Label();
-        textBox6 = new TextBox();
-        textBox5 = new TextBox();
+        txt_t3_Profit = new TextBox();
+        txt_t3_Equity = new TextBox();
         txt_t3_Balance = new TextBox();
         txt_t3_Currency = new TextBox();
         txt_t3_Login = new TextBox();
@@ -99,8 +99,8 @@ partial class LauncherView
         // 
         groupBox1.Controls.Add(t1_Status);
         groupBox1.Controls.Add(label16);
-        groupBox1.Controls.Add(textBox2);
-        groupBox1.Controls.Add(textBox1);
+        groupBox1.Controls.Add(txt_t1_Profit);
+        groupBox1.Controls.Add(txt_t1_Equity);
         groupBox1.Controls.Add(txt_t1_Balance);
         groupBox1.Controls.Add(txt_t1_Currency);
         groupBox1.Controls.Add(txt_t1_Login);
@@ -137,21 +137,21 @@ partial class LauncherView
         label16.TabIndex = 2;
         label16.Text = "Status:";
         // 
-        // textBox2
+        // txt_t1_Profit
         // 
-        textBox2.Location = new Point(75, 167);
-        textBox2.Name = "textBox2";
-        textBox2.ReadOnly = true;
-        textBox2.Size = new Size(127, 23);
-        textBox2.TabIndex = 1;
+        txt_t1_Profit.Location = new Point(75, 167);
+        txt_t1_Profit.Name = "txt_t1_Profit";
+        txt_t1_Profit.ReadOnly = true;
+        txt_t1_Profit.Size = new Size(127, 23);
+        txt_t1_Profit.TabIndex = 1;
         // 
-        // textBox1
+        // txt_t1_Equity
         // 
-        textBox1.Location = new Point(75, 138);
-        textBox1.Name = "textBox1";
-        textBox1.ReadOnly = true;
-        textBox1.Size = new Size(127, 23);
-        textBox1.TabIndex = 1;
+        txt_t1_Equity.Location = new Point(75, 138);
+        txt_t1_Equity.Name = "txt_t1_Equity";
+        txt_t1_Equity.ReadOnly = true;
+        txt_t1_Equity.Size = new Size(127, 23);
+        txt_t1_Equity.TabIndex = 1;
         // 
         // txt_t1_Balance
         // 
@@ -243,8 +243,8 @@ partial class LauncherView
         // 
         groupBox2.Controls.Add(t2_Status);
         groupBox2.Controls.Add(label17);
-        groupBox2.Controls.Add(textBox4);
-        groupBox2.Controls.Add(textBox3);
+        groupBox2.Controls.Add(txt_t2_Profit);
+        groupBox2.Controls.Add(txt_t2_Equity);
         groupBox2.Controls.Add(txt_t2_Balance);
         groupBox2.Controls.Add(txt_t2_Currency);
         groupBox2.Controls.Add(txt_t2_Login);
@@ -280,21 +280,21 @@ partial class LauncherView
         label17.TabIndex = 2;
         label17.Text = "Status:";
         // 
-        // textBox4
+        // txt_t2_Profit
         // 
-        textBox4.Location = new Point(73, 166);
-        textBox4.Name = "textBox4";
-        textBox4.ReadOnly = true;
-        textBox4.Size = new Size(127, 23);
-        textBox4.TabIndex = 1;
+        txt_t2_Profit.Location = new Point(73, 166);
+        txt_t2_Profit.Name = "txt_t2_Profit";
+        txt_t2_Profit.ReadOnly = true;
+        txt_t2_Profit.Size = new Size(127, 23);
+        txt_t2_Profit.TabIndex = 1;
         // 
-        // textBox3
+        // txt_t2_Equity
         // 
-        textBox3.Location = new Point(73, 138);
-        textBox3.Name = "textBox3";
-        textBox3.ReadOnly = true;
-        textBox3.Size = new Size(127, 23);
-        textBox3.TabIndex = 1;
+        txt_t2_Equity.Location = new Point(73, 138);
+        txt_t2_Equity.Name = "txt_t2_Equity";
+        txt_t2_Equity.ReadOnly = true;
+        txt_t2_Equity.Size = new Size(127, 23);
+        txt_t2_Equity.TabIndex = 1;
         // 
         // txt_t2_Balance
         // 
@@ -386,8 +386,8 @@ partial class LauncherView
         // 
         groupBox3.Controls.Add(t3_Status);
         groupBox3.Controls.Add(label18);
-        groupBox3.Controls.Add(textBox6);
-        groupBox3.Controls.Add(textBox5);
+        groupBox3.Controls.Add(txt_t3_Profit);
+        groupBox3.Controls.Add(txt_t3_Equity);
         groupBox3.Controls.Add(txt_t3_Balance);
         groupBox3.Controls.Add(txt_t3_Currency);
         groupBox3.Controls.Add(txt_t3_Login);
@@ -423,21 +423,21 @@ partial class LauncherView
         label18.TabIndex = 2;
         label18.Text = "Status:";
         // 
-        // textBox6
+        // txt_t3_Profit
         // 
-        textBox6.Location = new Point(73, 167);
-        textBox6.Name = "textBox6";
-        textBox6.ReadOnly = true;
-        textBox6.Size = new Size(127, 23);
-        textBox6.TabIndex = 1;
+        txt_t3_Profit.Location = new Point(73, 167);
+        txt_t3_Profit.Name = "txt_t3_Profit";
+        txt_t3_Profit.ReadOnly = true;
+        txt_t3_Profit.Size = new Size(127, 23);
+        txt_t3_Profit.TabIndex = 1;
         // 
-        // textBox5
+        // txt_t3_Equity
         // 
-        textBox5.Location = new Point(73, 138);
-        textBox5.Name = "textBox5";
-        textBox5.ReadOnly = true;
-        textBox5.Size = new Size(127, 23);
-        textBox5.TabIndex = 1;
+        txt_t3_Equity.Location = new Point(73, 138);
+        txt_t3_Equity.Name = "txt_t3_Equity";
+        txt_t3_Equity.ReadOnly = true;
+        txt_t3_Equity.Size = new Size(127, 23);
+        txt_t3_Equity.TabIndex = 1;
         // 
         // txt_t3_Balance
         // 
@@ -734,16 +734,16 @@ partial class LauncherView
     private Label t3_Status;
     private Label label18;
     private Label t2_Status;
-    private TextBox textBox2;
-    private TextBox textBox1;
+    private TextBox txt_t1_Profit;
+    private TextBox txt_t1_Equity;
     private Label label20;
     private Label label19;
-    private TextBox textBox4;
-    private TextBox textBox3;
+    private TextBox txt_t2_Profit;
+    private TextBox txt_t2_Equity;
     private Label label22;
     private Label label21;
-    private TextBox textBox6;
-    private TextBox textBox5;
+    private TextBox txt_t3_Profit;
+    private TextBox txt_t3_Equity;
     private Label label24;
     private Label label23;
     private CheckBox ckbx_Connect;

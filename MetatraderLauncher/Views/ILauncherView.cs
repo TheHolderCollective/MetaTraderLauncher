@@ -8,4 +8,5 @@ public interface ILauncherView
     public void SetPresenter(LauncherPresenter presenter);
     public void UpdateAccountInfo(TerminalID terminal, AccountInfo accountInfo);
     public void ClearAccountInfo();
+    public void FocusView();
 }

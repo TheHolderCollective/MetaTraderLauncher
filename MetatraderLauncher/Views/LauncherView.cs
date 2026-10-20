@@ -41,11 +41,17 @@ public partial class LauncherView : Form, ILauncherView
         ClearAllTextBoxes();
     }
 
+    public void FocusView()
+    {
+        this.TopMost = true;
+    }
+
     #endregion
 
-    private void btn_LaunchAll_Click(object sender, EventArgs e)
+    #region Event handler methods
+    private async void btn_LaunchAll_Click(object sender, EventArgs e)
     {
-        _presenter.LaunchAllTerminals();
+        await _presenter.LaunchAllTerminals(ckbx_Connect.Checked);
     }
 
     private void btn_KillAll_Click(object sender, EventArgs e)
@@ -67,6 +73,7 @@ public partial class LauncherView : Form, ILauncherView
     {
         await _presenter.UpdateAccountInfo(TerminalID.Terminal3);
     }
+    #endregion
 
     #region Helpers
 
@@ -74,8 +81,6 @@ public partial class LauncherView : Form, ILauncherView
     {
         foreach (var item in grpBox.Controls.OfType<TextBox>())
         {
-            if (item.Name.Contains("_Name"))
-                item.Text = accountInfo.Name;
             if (item.Name.Contains("_Server"))
                 item.Text = accountInfo.Server;
             if (item.Name.Contains("_Login"))
@@ -84,6 +89,10 @@ public partial class LauncherView : Form, ILauncherView
                 item.Text = accountInfo.Currency;
             if (item.Name.Contains("_Balance"))
                 item.Text = accountInfo.Balance;
+            if (item.Name.Contains("_Equity"))
+                item.Text = accountInfo.Equity;
+            if (item.Name.Contains("_Profit"))
+                item.Text = accountInfo.Profit;
         }
     }
 
