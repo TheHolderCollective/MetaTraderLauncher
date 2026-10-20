@@ -41,7 +41,7 @@ public partial class LauncherView : Form, ILauncherView
         ClearAllTextBoxes();
     }
 
-    public void FocusView()
+    public void BringViewToFront()
     {
         this.TopMost = true;
     }
@@ -49,6 +49,7 @@ public partial class LauncherView : Form, ILauncherView
     #endregion
 
     #region Event handler methods
+
     private async void btn_LaunchAll_Click(object sender, EventArgs e)
     {
         await _presenter.LaunchAllTerminals(ckbx_Connect.Checked);
@@ -73,6 +74,7 @@ public partial class LauncherView : Form, ILauncherView
     {
         await _presenter.UpdateAccountInfo(TerminalID.Terminal3);
     }
+
     #endregion
 
     #region Helpers
@@ -111,17 +113,5 @@ public partial class LauncherView : Form, ILauncherView
         }
     }
 
-    private void SetAllStatuses(string status)
-    {
-        t1_Status.Text = status;
-        t2_Status.Text = status;
-        t3_Status.Text = status;
-    }
-
     #endregion
-
-    private void groupBox1_Enter(object sender, EventArgs e)
-    {
-
-    }
 }

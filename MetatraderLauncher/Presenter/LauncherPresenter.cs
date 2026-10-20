@@ -33,7 +33,7 @@ public class LauncherPresenter
             await UpdateAccountInfo(TerminalID.Terminal3);
         }
 
-        _view.FocusView();
+        _view.BringViewToFront();
     }
 
     public void KillAllTerminals()

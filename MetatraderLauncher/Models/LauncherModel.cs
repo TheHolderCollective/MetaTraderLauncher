@@ -63,7 +63,7 @@ public class LauncherModel
             {
                 info.TerminalProcess = Process.Start(info.FileName);
                 info.Launched = info.TerminalProcess is not null ? true : false;
-                Thread.Sleep(500);
+                Thread.Sleep(650); // this gives the terminals time to load 
             }
         }
     }

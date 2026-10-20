@@ -29,8 +29,6 @@ partial class LauncherView
     private void InitializeComponent()
     {
         groupBox1 = new GroupBox();
-        t1_Status = new Label();
-        label16 = new Label();
         txt_t1_Profit = new TextBox();
         txt_t1_Equity = new TextBox();
         txt_t1_Balance = new TextBox();
@@ -44,8 +42,6 @@ partial class LauncherView
         label3 = new Label();
         label2 = new Label();
         groupBox2 = new GroupBox();
-        t2_Status = new Label();
-        label17 = new Label();
         txt_t2_Profit = new TextBox();
         txt_t2_Equity = new TextBox();
         txt_t2_Balance = new TextBox();
@@ -59,8 +55,6 @@ partial class LauncherView
         label8 = new Label();
         label9 = new Label();
         groupBox3 = new GroupBox();
-        t3_Status = new Label();
-        label18 = new Label();
         txt_t3_Profit = new TextBox();
         txt_t3_Equity = new TextBox();
         txt_t3_Balance = new TextBox();
@@ -97,8 +91,6 @@ partial class LauncherView
         // 
         // groupBox1
         // 
-        groupBox1.Controls.Add(t1_Status);
-        groupBox1.Controls.Add(label16);
         groupBox1.Controls.Add(txt_t1_Profit);
         groupBox1.Controls.Add(txt_t1_Equity);
         groupBox1.Controls.Add(txt_t1_Balance);
@@ -113,29 +105,10 @@ partial class LauncherView
         groupBox1.Controls.Add(label2);
         groupBox1.Location = new Point(25, 19);
         groupBox1.Name = "groupBox1";
-        groupBox1.Size = new Size(209, 236);
+        groupBox1.Size = new Size(209, 213);
         groupBox1.TabIndex = 0;
         groupBox1.TabStop = false;
         groupBox1.Text = "Terminal 1";
-        groupBox1.Enter += groupBox1_Enter;
-        // 
-        // t1_Status
-        // 
-        t1_Status.AutoSize = true;
-        t1_Status.Location = new Point(68, 205);
-        t1_Status.Name = "t1_Status";
-        t1_Status.Size = new Size(58, 15);
-        t1_Status.TabIndex = 3;
-        t1_Status.Text = "Unknown";
-        // 
-        // label16
-        // 
-        label16.AutoSize = true;
-        label16.Location = new Point(10, 205);
-        label16.Name = "label16";
-        label16.Size = new Size(42, 15);
-        label16.TabIndex = 2;
-        label16.Text = "Status:";
         // 
         // txt_t1_Profit
         // 
@@ -241,8 +214,6 @@ partial class LauncherView
         // 
         // groupBox2
         // 
-        groupBox2.Controls.Add(t2_Status);
-        groupBox2.Controls.Add(label17);
         groupBox2.Controls.Add(txt_t2_Profit);
         groupBox2.Controls.Add(txt_t2_Equity);
         groupBox2.Controls.Add(txt_t2_Balance);
@@ -257,28 +228,10 @@ partial class LauncherView
         groupBox2.Controls.Add(label9);
         groupBox2.Location = new Point(258, 19);
         groupBox2.Name = "groupBox2";
-        groupBox2.Size = new Size(209, 236);
+        groupBox2.Size = new Size(209, 213);
         groupBox2.TabIndex = 0;
         groupBox2.TabStop = false;
         groupBox2.Text = "Terminal 2";
-        // 
-        // t2_Status
-        // 
-        t2_Status.AutoSize = true;
-        t2_Status.Location = new Point(68, 205);
-        t2_Status.Name = "t2_Status";
-        t2_Status.Size = new Size(58, 15);
-        t2_Status.TabIndex = 3;
-        t2_Status.Text = "Unknown";
-        // 
-        // label17
-        // 
-        label17.AutoSize = true;
-        label17.Location = new Point(8, 205);
-        label17.Name = "label17";
-        label17.Size = new Size(42, 15);
-        label17.TabIndex = 2;
-        label17.Text = "Status:";
         // 
         // txt_t2_Profit
         // 
@@ -384,8 +337,6 @@ partial class LauncherView
         // 
         // groupBox3
         // 
-        groupBox3.Controls.Add(t3_Status);
-        groupBox3.Controls.Add(label18);
         groupBox3.Controls.Add(txt_t3_Profit);
         groupBox3.Controls.Add(txt_t3_Equity);
         groupBox3.Controls.Add(txt_t3_Balance);
@@ -400,28 +351,10 @@ partial class LauncherView
         groupBox3.Controls.Add(label14);
         groupBox3.Location = new Point(491, 19);
         groupBox3.Name = "groupBox3";
-        groupBox3.Size = new Size(209, 236);
+        groupBox3.Size = new Size(209, 213);
         groupBox3.TabIndex = 0;
         groupBox3.TabStop = false;
         groupBox3.Text = "Terminal 3";
-        // 
-        // t3_Status
-        // 
-        t3_Status.AutoSize = true;
-        t3_Status.Location = new Point(71, 205);
-        t3_Status.Name = "t3_Status";
-        t3_Status.Size = new Size(58, 15);
-        t3_Status.TabIndex = 3;
-        t3_Status.Text = "Unknown";
-        // 
-        // label18
-        // 
-        label18.AutoSize = true;
-        label18.Location = new Point(10, 205);
-        label18.Name = "label18";
-        label18.Size = new Size(42, 15);
-        label18.TabIndex = 2;
-        label18.Text = "Status:";
         // 
         // txt_t3_Profit
         // 
@@ -529,7 +462,7 @@ partial class LauncherView
         // 
         groupBox4.Controls.Add(btn_t1_Kill);
         groupBox4.Controls.Add(btn_t1_Connect);
-        groupBox4.Location = new Point(25, 276);
+        groupBox4.Location = new Point(25, 254);
         groupBox4.Name = "groupBox4";
         groupBox4.Size = new Size(214, 78);
         groupBox4.TabIndex = 1;
@@ -559,7 +492,7 @@ partial class LauncherView
         // 
         groupBox5.Controls.Add(btn_t2_Kill);
         groupBox5.Controls.Add(btn_t2_Connect);
-        groupBox5.Location = new Point(256, 276);
+        groupBox5.Location = new Point(256, 254);
         groupBox5.Name = "groupBox5";
         groupBox5.Size = new Size(214, 78);
         groupBox5.TabIndex = 1;
@@ -589,7 +522,7 @@ partial class LauncherView
         // 
         groupBox6.Controls.Add(btn_t3_Kill);
         groupBox6.Controls.Add(btn_t3_Connect);
-        groupBox6.Location = new Point(489, 276);
+        groupBox6.Location = new Point(489, 254);
         groupBox6.Name = "groupBox6";
         groupBox6.Size = new Size(214, 78);
         groupBox6.TabIndex = 1;
@@ -619,7 +552,7 @@ partial class LauncherView
         // 
         groupBox7.Controls.Add(btn_LaunchAll);
         groupBox7.Controls.Add(btn_KillAll);
-        groupBox7.Location = new Point(24, 372);
+        groupBox7.Location = new Point(24, 350);
         groupBox7.Name = "groupBox7";
         groupBox7.Size = new Size(677, 68);
         groupBox7.TabIndex = 2;
@@ -649,7 +582,7 @@ partial class LauncherView
         // ckbx_Connect
         // 
         ckbx_Connect.AutoSize = true;
-        ckbx_Connect.Location = new Point(24, 456);
+        ckbx_Connect.Location = new Point(24, 433);
         ckbx_Connect.Name = "ckbx_Connect";
         ckbx_Connect.Size = new Size(193, 19);
         ckbx_Connect.TabIndex = 3;
@@ -660,7 +593,7 @@ partial class LauncherView
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(724, 487);
+        ClientSize = new Size(724, 466);
         Controls.Add(ckbx_Connect);
         Controls.Add(groupBox7);
         Controls.Add(groupBox6);
@@ -728,12 +661,6 @@ partial class LauncherView
     private GroupBox groupBox7;
     private Button btn_LaunchAll;
     private Button btn_KillAll;
-    private Label label16;
-    private Label t1_Status;
-    private Label label17;
-    private Label t3_Status;
-    private Label label18;
-    private Label t2_Status;
     private TextBox txt_t1_Profit;
     private TextBox txt_t1_Equity;
     private Label label20;
